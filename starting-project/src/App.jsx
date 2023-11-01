@@ -3,7 +3,7 @@
   Class should be added as className="" not as class=""
 */
 
-import PostsList from "./components/PostsList";
+import PostsList from "./components/PostsList/PostsList";
 
 function App() {
   return (
