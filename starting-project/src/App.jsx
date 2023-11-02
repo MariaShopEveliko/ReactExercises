@@ -3,14 +3,28 @@
   Class should be added as className="" not as class=""
 */
 
+import { useState } from "react";
+
 import PostsList from "./components/PostsList/PostsList";
+import MainHeader from "./components/MainHeader/MainHeader";
 
 function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+
+  function hideModalHandler() {
+    setModalIsVisible(false);
+  }
+  function showModalHandler() {
+    setModalIsVisible(true);
+  }
+
   return (
-    // it's required to have a wrapper el-t, but if we don't want to use any, we can add an empty element <>...</> which is called "React Fragment" (or use <React.Fragment>)
-    <main>
-      <PostsList />
-    </main>
+    <>
+      <MainHeader onCreatePost={showModalHandler}/>
+      <main>
+        <PostsList isModalVisible={modalIsVisible} onHideModal={hideModalHandler}/>
+      </main>
+    </>
   );
 }
 
