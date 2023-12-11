@@ -18,38 +18,13 @@ button {
     background: linear-gradient(180deg, #474232 0%, #28271c 100%);
     color: white;
   }
-  
-  label.invalid {
-    color: #f87171;
-  }
-  
-  input.invalid {
-    color: #ef4444;
-    border-color: #f73f3f;
-    background-color: #fed2d2;
-  }
-  
+
   .actions {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
   }
-  
-  .button {
-    padding: 1rem 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0.25rem;
-    color: #1f2937;
-    background-color: #f0b322;
-    border-radius: 6px;
-    border: none;
-  }
-  
-  .button:hover {
-    background-color: #f0920e;
-  }
-  
+    
   .text-button {
     color: #f0b322;
     border: none;
