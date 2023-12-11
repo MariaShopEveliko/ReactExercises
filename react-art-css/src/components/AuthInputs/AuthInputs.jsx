@@ -32,8 +32,10 @@ export default function AuthInputs() {
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
-    <div id="auth-inputs">
-      <ControlWrp>
+    <div 
+    // id="auth-inputs"
+    className='w-full max-w-sm p-8 rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800 mx-auto'>
+      <ControlWrp className='flex flex-col gap-2'>
         <CustomInput label="Email" invalid={emailNotValid} type="email" onChange={(event) => handleInputChange('email', event.target.value)} />
         <CustomInput label="Password" invalid={passwordNotValid} type="password" onChange={(event) => handleInputChange('password', event.target.value)} />
       </ControlWrp>
