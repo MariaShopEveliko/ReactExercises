@@ -14,6 +14,11 @@ body {
   min-height: 100vh;
 }
 
+.theme-light{ 
+  color: #382e1b; 
+  background: linear-gradient(#eed8b5, #f3e7d4);
+}
+
 #main-header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +45,10 @@ h1 {
   margin: 0;
 }
 
+.theme-light h1{ 
+  color: #382e1b; 
+}
+
 #main-header button {
   background: #edbf68;
   border: none;
@@ -54,6 +63,15 @@ h1 {
   background: #f5b744;
 }
 
+.theme-light button{ 
+  background: #201e1a;
+  color: #edbf68; 
+}
+
+.theme-light button:hover{ 
+  background: #201e1a;
+}
+
 #shop {
   width: 70%;
   margin: 2rem auto;
@@ -63,6 +81,10 @@ h1 {
   font-size: 1.5rem;
   color: #a59b8b;
   text-transform: uppercase;
+}
+
+.theme-light #shop h2{ 
+  color: #44423d;
 }
 
 #products {
@@ -81,6 +103,9 @@ h1 {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.theme-light .product{
+  background: #cbbb9f;
 }
 
 .product img {
@@ -106,6 +131,10 @@ h1 {
   font-size: 1rem;
   color: #d1b68b;
   margin: 0;
+}
+
+.theme-light .product-content h3, .theme-light .product-price{ 
+  color: #201e1a;
 }
 
 .product-actions {
