@@ -8,10 +8,10 @@ import { DUMMY_PRODUCTS } from "./dummy-products.js";
 function App() {
   return (
     <ThemeContextProvider>
-      <CartContextProvider>
-        <ThemeContext.Consumer>
-          {(themeCtx) => (
-            <div className={`theme-${themeCtx.theme}`}>
+      <ThemeContext.Consumer>
+        {(themeCtx) => (
+          <div className={`theme-${themeCtx.theme}`}>
+            <CartContextProvider>
               <Header />
               <Shop>
                 {DUMMY_PRODUCTS.map((product) => (
@@ -20,10 +20,10 @@ function App() {
                   </li>
                 ))}
               </Shop>
-            </div>
-          )}
-        </ThemeContext.Consumer>
-      </CartContextProvider>
+            </CartContextProvider>
+          </div>
+        )}
+      </ThemeContext.Consumer>
     </ThemeContextProvider>
   );
 }
