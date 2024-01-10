@@ -6,7 +6,7 @@ export default function Places({ title, places, fallbackText, onSelectPlace }) {
       {places.length > 0 && (
         <ul className="places">
           {places.map((place) => (
-            <li key={place.id} className="place-item">
+            place && <li key={place.id} className="place-item">
               <button onClick={() => onSelectPlace(place.id)}>
                 <img src={place.image.src} alt={place.image.alt} />
                 <h3>{place.title}</h3>
