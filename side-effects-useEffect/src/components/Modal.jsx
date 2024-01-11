@@ -14,7 +14,7 @@ const Modal = function Modal({ children, open, onClose }) {
 
   return createPortal(
     <dialog className="modal" ref={dialog} onClose={onClose}>
-      {open ? { children } : null}
+      {open && children}
     </dialog>,
     document.getElementById("modal")
   );
