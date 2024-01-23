@@ -25,15 +25,31 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
       }, 2000);
     }, 1000);
   }
+
+  let timer = 10000;
+
+  if (answer.selectedAnswer) {
+    timer = 1000;
+  }
+  if (answer.isCorrect !== null) {
+    timer = 2000;
+  }
+
   let answerState = "";
   if (answer.selectedAnswer && answer.isCorrect !== null) {
     answerState = answer.isCorrect ? "correct" : "wrong";
   } else if (answer.selectedAnswer) {
     answerState = "answered";
   }
+
   return (
-    <div id="questions">
-      <QuestionTimer timeout={10000} onTimeout={onSkipAnswer} />
+    <div id="question">
+      <QuestionTimer
+        timeout={timer}
+        onTimeout={answer.selectedAnswer === "" ? onSkipAnswer : null}
+        mode={answerState}
+        key={timer}
+      />
       <>
         <h2>{QUESTIONS[index].text}</h2>
         <Answers
